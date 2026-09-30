@@ -1,0 +1,46 @@
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@movie.com",
+  "password": "admin123"
+}
+
+### GET PROFILE / TOKEN TEST
+GET http://localhost:3000/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYWRtaW5AbW92aWUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkwNjcwODg2LCJleHAiOjE3OTA3NTcyODZ9.Z-yVnasfe1x-6n1e6HQo0E0oZF9z5NJcXUtA40YNCT0
+
+//GENRE
+### 1. TAMBAH GENRE BARU (POST)
+POST http://localhost:3000/api/genres
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYWRtaW5AbW92aWUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkwNjcwODg2LCJleHAiOjE3OTA3NTcyODZ9.Z-yVnasfe1x-6n1e6HQo0E0oZF9z5NJcXUtA40YNCT0
+
+{
+  "nama_genre": "Sci-Fi"
+}
+
+### 2. AMBIL SEMUA DATA GENRE (GET)
+GET http://localhost:3000/api/genres
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYWRtaW5AbW92aWUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkwNjcwODg2LCJleHAiOjE3OTA3NTcyODZ9.Z-yVnasfe1x-6n1e6HQo0E0oZF9z5NJcXUtA40YNCT0
+### 3. AMBIL GENRE BERDASARKAN ID (GET)
+GET http://localhost:3000/api/genres/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYWRtaW5AbW92aWUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkwNjcwODg2LCJleHAiOjE3OTA3NTcyODZ9.Z-yVnasfe1x-6n1e6HQo0E0oZF9z5NJcXUtA40YNCT0
+
+// FILM
+### 1. TAMBAH FILM BARU (POST)
+POST http://localhost:3000/api/films
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYWRtaW5AbW92aWUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkwNjcwODg2LCJleHAiOjE3OTA3NTcyODZ9.Z-yVnasfe1x-6n1e6HQo0E0oZF9z5NJcXUtA40YNCT0
+
+{
+  "judul": "Interstellar",
+  "sutradara": "Christopher Nolan",
+  "tahun_rilis": 2014,
+  "durasi": 169,
+  "genre_id": 1
+}
+
+### 2. AMBIL SEMUA DATA FILM (GET)
+GET http://localhost:3000/api/films
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYWRtaW5AbW92aWUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzkwNjcwODg2LCJleHAiOjE3OTA3NTcyODZ9.Z-yVnasfe1x-6n1e6HQo0E0oZF9z5NJcXUtA40YNCT0
